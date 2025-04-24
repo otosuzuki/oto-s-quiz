@@ -1,6 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+let a = 1;
+
 const firebaseConfig = {
   apiKey: "AIzaSyCqWRXxBWsd-FdqMenprdncaEZH7NhUOe8",
   authDomain: "quiz-290a0.firebaseapp.com",
@@ -83,7 +85,7 @@ function showQuestion() {
 
 // 回答確認
 function confirmAnswer(index) {
-  if (confirm("ファイナルアンサー？")) {
+  if (a == 1) {
     checkAnswer(index === quizData[currentQuestion].answer);
   }
 }
